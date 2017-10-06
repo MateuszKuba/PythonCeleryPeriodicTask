@@ -1,6 +1,6 @@
 from celery import Celery
 
-app = Celery()
+app = Celery('task')
 
 @app.on_after_configure.connect
 def periodic_tasks(sender, **kwargs):
